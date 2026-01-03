@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data files (keep only small sample data if needed)
+data/*.csv
+!data/stores_sample.csv
+!data/sales_sample.csv
+
+# Logs
+logs/*.log
+!logs/README.md
+
+# DBT
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/dbt_project.yml
+dbt_project/packages.yml
+
+# Docker
+.dockerignore
+
+# Environment variables
+.env
+.env.local
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Backup files
+*.bak
+*.backup
+
+# Large files
+*.parquet
+*.feather
+*.pkl
+*.pickle

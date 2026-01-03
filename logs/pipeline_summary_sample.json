@@ -1,0 +1,24 @@
+﻿{
+  "timestamp": "2024-01-03T12:00:00",
+  "duration_seconds": 3.5,
+  "files_processed": 4,
+  "records_processed": 31750,
+  "results": {
+    "stores.csv": {
+      "status": "success",
+      "records": 150
+    },
+    "daily_sales.csv": {
+      "status": "success",
+      "records": 27000
+    },
+    "inventory_snapshots.csv": {
+      "status": "success",
+      "records": 4500
+    },
+    "promotions.csv": {
+      "status": "success",
+      "records": 100
+    }
+  }
+}
