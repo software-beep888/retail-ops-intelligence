@@ -1,0 +1,30 @@
+name: Deploy to Streamlit Cloud
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          
+      - name: Test imports
+        run: |
+          python -c "import pandas; import numpy; import streamlit; import plotly; print('✅ All imports working')"
+          
+      - name: Verify setup
+        run: |
+          python run.py --test-mode

@@ -125,3 +125,11 @@ git clone https://github.com/yourusername/retail-ops-intelligence.git
 cd retail-ops-intelligence
 python run.py
 streamlit run dashboard/app.py
+# Retail Ops Intelligence
+
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/YOUR_USERNAME/retail-ops-intelligence)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/UI-Streamlit-red)](https://streamlit.io)
+
+📺 **Watch the 2.5-minute walkthrough:** [Loom Demo](YOUR_LOOM_LINK_HERE)
