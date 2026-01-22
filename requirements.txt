@@ -1,7 +1,32 @@
+# First, check current requirements
+Get-Content requirements.txt
+
+# Update with common Streamlit retail ops dependencies
+@'
+# Streamlit
+streamlit==1.28.1
+streamlit-aggrid==0.3.4
+streamlit-option-menu==0.3.6
+
+# Data Processing
 pandas==2.1.4
 numpy==1.24.3
-scikit-learn==1.3.2
+openpyxl==3.1.2
+
+# Visualization
+plotly==5.18.0
 matplotlib==3.8.0
 seaborn==0.13.0
-streamlit==1.28.1  # if using Streamlit
-# or flask==2.3.3 if using Flask
+
+# Database & Utilities
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+python-dotenv==1.0.0
+pytz==2023.3.post1
+
+# Date/Time
+python-dateutil==2.8.2
+
+# API
+requests==2.31.0
+'@ | Out-File -FilePath requirements.txt -Encoding UTF8

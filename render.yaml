@@ -1,10 +1,17 @@
+# Update render.yaml for Streamlit
+@'
 services:
   - type: web
-    name: retail-ops
+    name: retail-ops-dashboard
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
-    # or for Flask: startCommand: gunicorn app:app
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: streamlit run dashboard/app.py --server.port $PORT --server.address 0.0.0.0
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
+    autoDeploy: true
+    healthCheckPath: /
+    plan: free
+'@ | Out-File -FilePath render.yaml -Encoding UTF8
