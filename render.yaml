@@ -1,15 +1,9 @@
-# Update render.yaml with proper build command
-@'
-services:
+﻿services:
   - type: web
     name: retail-ops-dashboard
     env: python
-    buildCommand: |
-      pip install --upgrade pip
-      pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt
     startCommand: streamlit run dashboard/app.py --server.port $PORT --server.address 0.0.0.0
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
-    autoDeploy: true
-'@ | Out-File -FilePath render.yaml -Encoding UTF8

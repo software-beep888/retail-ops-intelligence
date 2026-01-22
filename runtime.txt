@@ -1,2 +1,1 @@
-# Make sure runtime.txt has Python 3.11 (not 3.13)
-'python-3.11.9' | Out-File -FilePath runtime.txt -Encoding UTF8
+﻿python-3.11.9
