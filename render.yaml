@@ -1,4 +1,4 @@
-# Update render.yaml for Streamlit
+# Update render.yaml with proper build command
 @'
 services:
   - type: web
@@ -12,6 +12,4 @@ services:
       - key: PYTHON_VERSION
         value: 3.11.9
     autoDeploy: true
-    healthCheckPath: /
-    plan: free
 '@ | Out-File -FilePath render.yaml -Encoding UTF8
